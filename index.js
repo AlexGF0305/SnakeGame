@@ -25,7 +25,7 @@ const updateFoodPosition = () => {
 
 const handleGamerOver = () =>{
     clearInterval(setIntervalId);
-    alert("Gamer Over! Press Ok to Replay . . . ");
+    alert("Buen intento, sigue jugando. . . ");
     location.reload();
 
 }
@@ -69,7 +69,8 @@ const initGame = () => {
         highScore=score >= highScore ? score: highScore; // si el score > high score => high score = score
 
         localStorage.setItem("high-score", highScore);
-        ScoreElement.innerText =`High Score: ${highScore}`;
+        ScoreElement.innerText = `Score: ${score}`
+        highScoreScoreElement.innerText =`High Score: ${highScore}`;
     }
     
     //update snake head
